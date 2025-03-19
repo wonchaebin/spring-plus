@@ -13,7 +13,7 @@ public class JPAConfiguration {
     private EntityManager entityManager;
 
     @Bean
-    public JPAQueryFactory jpaQueryFactor() {
+    public JPAQueryFactory jpaQueryFactor(EntityManager entityManager) {
         return new JPAQueryFactory(entityManager);
     }
 }
